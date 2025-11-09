@@ -8,6 +8,9 @@
 }
 #display {
     height: 1cm;
+    width: 4.5cm;
+    font-size: large;
+    color: black;
 }
 .row{
     background-color: grey;
@@ -18,9 +21,13 @@
 }
 .button{
     height: 1cm;
-    width: 1cm;
+    width: 1.1cm;
     font-size: large;
 }
 #equal{
     background-color: mediumvioletred;
+}
+#clearButton{
+    height: 1cm;
+    width: 2.3cm;
 }
