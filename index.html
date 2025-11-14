@@ -8,9 +8,11 @@
     </head>
     <body>
         <table id="mainCalculator">
-            <tr style="height: 1cm;"><td colspan="4"><input type="text" id="display" value="0" disabled></td></tr>
+            <tr style="height: 1cm;"><td colspan="5"><input type="text" id="display" value="0" disabled></td></tr>
             <tr style="height: 1.15cm">
-                <td colspan="2"></td>
+                <td></td>
+                <td class="cell"><input type="button" value="+/-" onclick="test()" class="button" id="+/-"></td>
+                <td class="cell"><input type="button" value="←" onclick="test()" class="button" id="←"></td>
                 <td colspan="2"><input type="button" value="Clear" onclick="clearDisplay()" id="clearButton"></td>
             </tr>
             <tr id="" class="row">
@@ -25,18 +27,21 @@
                 <td class="cell"><input type="button" value="5" onclick="append(5,'num',0)" class="button" id="5"></td>
                 <td class="cell"><input type="button" value="4" onclick="append(4,'num',0)" class="button" id="4"></td>
                 <td class="cell"><input type="button" value="/" onclick="append('/','operator')" class="button" id="/"></td>
+                <td class="cell"><input type="button" value="M-" onclick="test()" class="button" id="M-"></td>
             </tr>
             <tr id="" class="row">
                 <td class="cell"><input type="button" value="3" onclick="append(3,'num',0)" class="button" id="3"></td>
                 <td class="cell"><input type="button" value="2" onclick="append(2,'num',0)" class="button" id="2"></td>
                 <td class="cell"><input type="button" value="1" onclick="append(1,'num',0)" class="button" id="1"></td>
                 <td class="cell"><input type="button" value="-" onclick="append('-','operator',0)" class="button" id="-"></td>
+                <td class="cell"><input type="button" value="MR" onclick="test()" class="button" id="MR"></td>
             </tr>
             <tr id="" class="row">
                 <td class="cell"><input type="button" value="0" onclick="append(0,'num',0)" class="button" id="0"></td>
                 <td class="cell"><input type="button" value="." onclick="append('.','num',0)" class="button" id="."></td>
                 <td class="cell"><input type="button" value="=" onclick="equalSign()" class="button" id="equal"></td>
                 <td class="cell"><input type="button" value="+" onclick="append('+','operator',0)" class="button" id="+"></td>
+                <td class="cell"><input type="button" value="MC" onclick="test()" class="button" id="MC"></td>
             </tr>
         </table>
         <script src="script.js"></script>

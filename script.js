@@ -52,5 +52,5 @@ function equalSign(){
 }
 
 function test(n) {
-    alert("This feature is under development")
+    alert("This feature is under development");
 }
