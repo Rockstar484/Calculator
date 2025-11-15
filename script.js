@@ -51,6 +51,27 @@ function equalSign(){
     dis.value="="+result;
 }
 
+function erase(){
+    expression = String(expression);
+    dis.value = String(dis.value);
+
+    if(dis.value.charAt(0) == "="){
+        clearDisplay();
+        return;
+    }
+
+    expression = expression.slice(0,-1);
+    dis.value = dis.value.slice(0,-1);
+    
+    if(expression == ""){
+        expression = 0;
+        dis.value = "0";
+    }
+
+    expression = parseFloat(expression);
+
+}
+
 function test(n) {
     alert("This feature is under development");
 }
