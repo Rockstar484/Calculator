@@ -1,8 +1,8 @@
-let result=0, expression=0;
+let result="0", expression="";
 dis = document.getElementById("display")
 
 function append(input,type,multiply){
-    if (dis.value==0) {
+    if (dis.value=="0") {
         if (type=='num') {
         dis.value=input;
         expression+=input;
@@ -36,14 +36,14 @@ function append(input,type,multiply){
         }
         else {
             dis.value+=input;
-            expression+=""+input;
+            expression+=input;
         }
     }
 }
 
 function clearDisplay(){
     dis.value="0";
-    expression=0;
+    expression="";
 }
 
 function equalSign(){
@@ -52,9 +52,7 @@ function equalSign(){
 }
 
 function erase(){
-    expression = String(expression);
-    dis.value = String(dis.value);
-
+    
     if(dis.value.charAt(0) == "="){
         clearDisplay();
         return;
@@ -64,11 +62,9 @@ function erase(){
     dis.value = dis.value.slice(0,-1);
     
     if(expression == ""){
-        expression = 0;
+        expression = "";
         dis.value = "0";
     }
-
-    expression = parseFloat(expression);
 
 }
 
