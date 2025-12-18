@@ -15,7 +15,7 @@ function append(input,type,multiply){
         }
         if (type=='operator') {
             if (expression[expression.length-1]=='+' || expression[expression.length-1]=='-' || expression[expression.length-1]=='/' || expression[expression.length-1]=='x' || expression[expression.length-1]=='.') {
-                expression[expression.length-1]=input;
+                expression = expression.slice(0,-1) + input;
                 if (multiply==1) {
                     dis.value='x';
                 }
@@ -71,3 +71,14 @@ function erase(){
 function test(n) {
     alert("This feature is under development");
 }
+
+const Discord = document.getElementById("Discord");
+const GitHub = document.getElementById("GitHub");
+
+GitHub.addEventListener('click', ()=>{
+    window.open("https://github.com/Rockstar484/Calculator","_blank");
+});
+
+Discord.addEventListener('click', ()=>{
+    window.open("https://discord.com/invite/hym25DQhVb","_blank");
+});
