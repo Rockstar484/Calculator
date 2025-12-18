@@ -26,6 +26,7 @@
     height: 1cm;
     width: 1.2cm;
     font-size: large;
+    outline: none;
 }
 #equal{
     background-color: mediumvioletred;
