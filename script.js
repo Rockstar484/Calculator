@@ -76,7 +76,7 @@ const Discord = document.getElementById("Discord");
 const GitHub = document.getElementById("GitHub");
 
 GitHub.addEventListener('click', ()=>{
-    window.open("","_blank");
+    window.open("https://github.com/Rockstar484/Calculator","_blank");
 });
 
 Discord.addEventListener('click', ()=>{
