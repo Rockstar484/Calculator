@@ -19,14 +19,14 @@
                 <td class="cell"><input type="button" value="8" onclick="append('8','num','0')" class="button" id="8"></td>
                 <td class="cell"><input type="button" value="7" onclick="append('7','num','0')" class="button" id="7"></td>
                 <td class="cell"><input type="button" value="x" onclick="append('*','operator','1')" class="button" id="x"></td>
-                <td class="cell"><input type="button" value="M+" onclick="memoryplus()" class="button" id="M+"></td>
+                <td class="cell"><input type="button" value="M+" onclick="memory('plus')" class="button" id="M+"></td>
             </tr>
             <tr id="" class="row">
                 <td class="cell"><input type="button" value="6" onclick="append('6','num','0')" class="button" id="6"></td>
                 <td class="cell"><input type="button" value="5" onclick="append('5','num','0')" class="button" id="5"></td>
                 <td class="cell"><input type="button" value="4" onclick="append('4','num','0')" class="button" id="4"></td>
                 <td class="cell"><input type="button" value="/" onclick="append('/','operator')" class="button" id="/"></td>
-                <td class="cell"><input type="button" value="M-" onclick="test()" class="button" id="M-"></td>
+                <td class="cell"><input type="button" value="M-" onclick="memory('minus')" class="button" id="M-"></td>
             </tr>
             <tr id="" class="row">
                 <td class="cell"><input type="button" value="3" onclick="append('3','num','0')" class="button" id="3"></td>
@@ -48,10 +48,13 @@
         <img src="GitHub_Invertocat_Dark.svg" class="social" id="GitHub" title="View code on GitHub">
         <img src="Discord-Symbol-Blurple.svg" class="social" id="Discord" title="Join my Discord server - Rockstar's server">
 
-        <br> <!-- Temporary -->
-        <span id="exp"></span> <!-- Temporary -->
-        <br> <!-- Temporary -->
-        <span id="mem"></span> <!-- Temporary -->
+        <!-- 
+        Temporary code
+        <br>
+        <span id="exp"></span>
+        <br>
+        <span id="mem"></span>
+        -->
         <script src="script.js"></script>
     </body>
 </html>

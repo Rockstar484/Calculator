@@ -1,4 +1,4 @@
-let result="0", expression="0",memory=0;
+let result="0", expression="0",Memory=0;
 dis = document.getElementById("display")
 
 function append(input,type,multiply){
@@ -75,13 +75,22 @@ function test(n) {
     alert("This feature is under development");
 }
 
-function memoryplus() {
-    memory = memory +eval(expression);
+function memory(sign) {
+    let newMemory = expression;
+    while("+-/*".includes(newMemory.charAt(newMemory.length-1))){
+        newMemory = newMemory.slice(0,-1);
+    }
+    newMemory = eval(newMemory);
+    if (sign==='plus') {
+        Memory = Memory + newMemory;
+    } else if(sign==='minus'){
+        Memory = Memory - newMemory;
+    }
 }
 
 document.addEventListener('keydown', (keyPressed)=>{
     if(keyPressed.ctrlKey || keyPressed.metaKey || keyPressed.altKey) return;
-    if((keyPressed.key>='0' && keyPressed.key<='9') || "+-/*xX.=EnterBackspaceEscape".includes(keyPressed.key)){
+    if((keyPressed.key>='0' && keyPressed.key<='9') || "+-/*xX.=EnterBackspaceEscape ".includes(keyPressed.key)){
         keyPressed.preventDefault();
         if(keyPressed.key==='Backspace')
         erase();
@@ -110,11 +119,11 @@ Discord.addEventListener('click', ()=>{
 });
 
 //Code below this comment is temporarily written for testing
-addEventListener('click', ()=>{
+/* addEventListener('click', ()=>{
     document.getElementById("exp").innerHTML=expression;
-    document.getElementById("mem").innerHTML=memory;
+    document.getElementById("mem").innerHTML=Memory;
 });
 addEventListener('keydown', ()=>{
     document.getElementById("exp").innerHTML=expression;
-    document.getElementById("mem").innerHTML=memory;
-});
+    document.getElementById("mem").innerHTML=Memory;
+}); */
