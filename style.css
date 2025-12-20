@@ -1,5 +1,6 @@
 #mainCalculator {
     height: 6cm;
+    width: 4cm;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20%;
@@ -8,7 +9,7 @@
 }
 #display {
     height: 1cm;
-    width: 4.5cm;
+    width: 5.9cm;
     font-size: large;
     color: black;
     text-align: right;
@@ -19,16 +20,30 @@
 .cell{
     height: 1cm;
     width: 1cm;
+    padding: 0;
 }
 .button{
     height: 1cm;
-    width: 1.1cm;
+    width: 1.2cm;
     font-size: large;
+    outline: none;
 }
 #equal{
     background-color: mediumvioletred;
 }
 #clearButton{
     height: 1cm;
-    width: 2.3cm;
+    width: 2.4cm;
+    outline: none;
+}
+.social{
+    width: 45px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+.social:hover{
+    transform: scale(1.2);
+}
+.visualFeedback{
+    background-color: gray;
 }
