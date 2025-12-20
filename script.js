@@ -71,13 +71,20 @@ function erase(){
     
 }
 
-function test(n) {
-    alert("This feature is under development");
-}
-
 function memory(sign) {
+    if(sign==='clear'){
+        Memory = 0;
+        return;
+    }
+    if (sign==='recall') {
+        dis.value+=Memory;
+        expression+=Memory;
+    }
     let newMemory = expression;
     while("+-/*".includes(newMemory.charAt(newMemory.length-1))){
+        if (newMemory=="") {
+            return;
+        }
         newMemory = newMemory.slice(0,-1);
     }
     newMemory = eval(newMemory);
@@ -117,13 +124,3 @@ GitHub.addEventListener('click', ()=>{
 Discord.addEventListener('click', ()=>{
     window.open("https://discord.com/invite/hym25DQhVb","_blank");
 });
-
-//Code below this comment is temporarily written for testing
-/* addEventListener('click', ()=>{
-    document.getElementById("exp").innerHTML=expression;
-    document.getElementById("mem").innerHTML=Memory;
-});
-addEventListener('keydown', ()=>{
-    document.getElementById("exp").innerHTML=expression;
-    document.getElementById("mem").innerHTML=Memory;
-}); */

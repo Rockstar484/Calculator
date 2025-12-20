@@ -33,28 +33,20 @@
                 <td class="cell"><input type="button" value="2" onclick="append('2','num','0')" class="button" id="2"></td>
                 <td class="cell"><input type="button" value="1" onclick="append('1','num','0')" class="button" id="1"></td>
                 <td class="cell"><input type="button" value="-" onclick="append('-','operator','0')" class="button" id="-"></td>
-                <td class="cell"><input type="button" value="MR" onclick="test()" class="button" id="MR"></td>
+                <td class="cell"><input type="button" value="MR" onclick="memory('recall')" class="button" id="MR"></td>
             </tr>
             <tr id="" class="row">
                 <td class="cell"><input type="button" value="0" onclick="append('0','num','0')" class="button" id="0"></td>
                 <td class="cell"><input type="button" value="." onclick="append('.','num','0')" class="button" id="."></td>
                 <td class="cell"><input type="button" value="=" onclick="equalSign()" class="button" id="equal"></td>
                 <td class="cell"><input type="button" value="+" onclick="append('+','operator','0')" class="button" id="+"></td>
-                <td class="cell"><input type="button" value="MC" onclick="test()" class="button" id="MC"></td>
+                <td class="cell"><input type="button" value="MC" onclick="memory('clear')" class="button" id="MC"></td>
             </tr>
         </table>
 
         <h1>Made by Shivansh Gautam</h1>
         <img src="GitHub_Invertocat_Dark.svg" class="social" id="GitHub" title="View code on GitHub">
         <img src="Discord-Symbol-Blurple.svg" class="social" id="Discord" title="Join my Discord server - Rockstar's server">
-
-        <!-- 
-        Temporary code
-        <br>
-        <span id="exp"></span>
-        <br>
-        <span id="mem"></span>
-        -->
         <script src="script.js"></script>
     </body>
 </html>
