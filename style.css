@@ -26,6 +26,7 @@
     height: 1cm;
     width: 1.2cm;
     font-size: large;
+    outline: none;
 }
 #equal{
     background-color: mediumvioletred;
@@ -33,6 +34,7 @@
 #clearButton{
     height: 1cm;
     width: 2.4cm;
+    outline: none;
 }
 .social{
     width: 45px;
@@ -41,4 +43,7 @@
 }
 .social:hover{
     transform: scale(1.2);
+}
+.visualFeedback{
+    background-color: gray;
 }
