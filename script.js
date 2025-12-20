@@ -77,8 +77,7 @@ function memory(sign) {
         return;
     }
     if (sign==='recall') {
-        dis.value+=Memory;
-        expression+=Memory;
+        append(Memory,'num','0');
     }
     let newMemory = expression;
     while("+-/*".includes(newMemory.charAt(newMemory.length-1))){
@@ -96,6 +95,7 @@ function memory(sign) {
 }
 
 document.addEventListener('keydown', (keyPressed)=>{
+    dis.scrollLeft = dis.scrollWidth;
     if(keyPressed.ctrlKey || keyPressed.metaKey || keyPressed.altKey) return;
     if((keyPressed.key>='0' && keyPressed.key<='9') || "+-/*xX.=EnterBackspaceEscape ".includes(keyPressed.key)){
         keyPressed.preventDefault();
@@ -113,7 +113,7 @@ document.addEventListener('keydown', (keyPressed)=>{
         append('*','operator','1');
     }
     let ID = keyPressed.key;
-    if(ID=='*'){
+    if(ID=='*' || ID=='X'){
         ID='x';
     } else if(ID=='Escape'){
         ID='clearButton';
@@ -123,6 +123,7 @@ document.addEventListener('keydown', (keyPressed)=>{
     setTimeout(()=>{
         ele.classList.remove("visualFeedback");
     },100);
+    dis.scrollLeft = dis.scrollWidth;
 });
 
 const Discord = document.getElementById("Discord");
@@ -135,3 +136,6 @@ GitHub.addEventListener('click', ()=>{
 Discord.addEventListener('click', ()=>{
     window.open("https://discord.com/invite/hym25DQhVb","_blank");
 });
+document.addEventListener('click',()=>{
+    dis.scrollLeft = dis.scrollWidth;
+})
