@@ -112,6 +112,17 @@ document.addEventListener('keydown', (keyPressed)=>{
         else if("*xX".includes(keyPressed.key))
         append('*','operator','1');
     }
+    let ID = keyPressed.key;
+    if(ID=='*'){
+        ID='x';
+    } else if(ID=='Escape'){
+        ID='clearButton';
+    }
+    let ele = document.getElementById(ID);
+    ele.classList.add("visualFeedback");
+    setTimeout(()=>{
+        ele.classList.remove("visualFeedback");
+    },100);
 });
 
 const Discord = document.getElementById("Discord");
